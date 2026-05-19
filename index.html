@@ -3,352 +3,554 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hagisu Living - Giải Pháp Không Gian Sống Toàn Diện </title>
-    <meta name="description" content="Chào mừng đến với Hagisu Việt Nam. Website đang trong quá trình nâng cấp, quý khách hàng vui lòng liên hệ hotline 0948350089; email info@hagisu.com.">
-    <meta name="keywords" content="hagisu, hagisu thương hiệu, dịch vụ hagisu, hagisu công nghệ">
-    <link rel="icon" href="https://img.icons8.com/color/48/domain.png" type="image/x-icon">
-    
-    <!-- Google Fonts & FontAwesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>HAGISU VIET NAM - Hệ Thống Cấp Gió Tươi Hồi Nhiệt & Lọc Không Khí</title>
     <style>
         :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e3a8a;
-            --text-color: #333333;
-            --bg-light: #f8fafc;
-            --white: #ffffff;
+            --primary-color: #0f4c81;
+            --secondary-color: #2a9d8f;
+            --dark-color: #264653;
+            --light-color: #f8f9fa;
+            --accent-color: #e76f51;
+            --text-color: #333;
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
             color: var(--text-color);
             line-height: 1.6;
-            background-color: var(--white);
+            background-color: #fff;
         }
 
-        /* Navigation */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header & Navigation */
         header {
-            position: fixed;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 5%;
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 1000;
-        }
-
-        .nav-container {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
         }
 
-        .logo {
+        .logo-area h1 {
             font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-            text-transform: uppercase;
             letter-spacing: 1px;
         }
+        .logo-area span {
+            font-size: 12px;
+            display: block;
+            color: #cbd5e1;
+        }
 
-        .nav-menu {
+        nav ul {
             display: flex;
             list-style: none;
         }
 
-        .nav-menu li {
-            margin-left: 30px;
+        nav ul li {
+            margin-left: 20px;
         }
 
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--text-color);
+        nav ul li a {
             font-weight: 600;
+            font-size: 15px;
             transition: color 0.3s;
+            padding: 8px 12px;
+            border-radius: 4px;
         }
 
-        .nav-menu a:hover {
-            color: var(--primary-color);
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: #2a9d8f;
         }
 
         /* Hero Section */
         .hero {
-            padding: 180px 20px 100px;
-            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            background: linear-gradient(rgba(15, 76, 129, 0.85), rgba(38, 70, 83, 0.9)), url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200') no-repeat center center/cover;
+            color: white;
+            padding: 100px 5% 80px;
             text-align: center;
         }
 
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            color: var(--secondary-color);
+        .hero h2 {
+            font-size: 38px;
             margin-bottom: 20px;
-            font-weight: 700;
+            text-transform: uppercase;
         }
 
         .hero p {
             font-size: 18px;
-            color: #4b5563;
-            margin-bottom: 30px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-style: italic;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--primary-color);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: transform 0.3s, background-color 0.3s;
-            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
-        }
-
-        .btn:hover {
+        .cta-btn {
             background-color: var(--secondary-color);
-            transform: translateY(-2px);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
-        /* Sections General */
-        section {
-            padding: 80px 20px;
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            background-color: #1d7a6f;
+        }
+
+        /* Sections Container */
+        .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 60px 20px;
         }
 
         .section-title {
             text-align: center;
-            font-size: 32px;
-            color: var(--secondary-color);
-            margin-bottom: 50px;
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 40px;
             position: relative;
+            text-transform: uppercase;
         }
 
         .section-title::after {
             content: '';
-            display: block;
-            width: 50px;
+            width: 60px;
             height: 3px;
-            background-color: var(--primary-color);
-            margin: 10px auto 0;
+            background-color: var(--secondary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        /* About Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-text p {
-            margin-bottom: 15px;
-            color: #4b5563;
-        }
-
-        .about-img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        /* Services Section */
-        .services-grid {
+        /* Why Section Grid */
+        .why-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            margin-top: 20px;
         }
 
-        .service-card {
-            background: var(--bg-light);
-            padding: 40px 30px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s;
+        .why-card {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            background: var(--white);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .service-icon {
-            font-size: 40px;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
+        .why-card h3 {
             margin-bottom: 15px;
-            color: var(--secondary-color);
+            color: var(--dark-color);
         }
 
-        /* Contact Section */
-        .contact-container {
+        /* Systems Grid */
+        .systems-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
         }
 
-        .contact-info i {
-            color: var(--primary-color);
-            margin-right: 10px;
-            width: 20px;
-        }
-
-        .contact-info p {
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            outline: none;
-        }
-
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-color: var(--primary-color);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--secondary-color);
-            color: var(--white);
+        .system-box {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: all 0.3s;
         }
 
-        /* Responsive */
+        .system-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            border-color: var(--secondary-color);
+        }
+
+        .system-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* Features Section */
+        .features-bg {
+            background-color: var(--light-color);
+        }
+
+        .tech-details {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .tech-list {
+            list-style-type: square;
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        .tech-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Table Design */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Model Tags Area */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .tag {
+            background: #e2e8f0;
+            color: var(--dark-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .tag.blue { background-color: #dbeafe; color: #1e40af; }
+        .tag.green { background-color: #dcfce7; color: #166534; }
+
+        /* Partner/Group Section */
+        .about-menred {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 20px;
+        }
+        .about-menred .section-title {
+            color: white;
+        }
+
+        /* Footer contact design */
+        footer {
+            background-color: #111;
+            color: #ccc;
+            padding: 40px 5% 20px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            border-left: 3px solid var(--secondary-color);
+            padding-left: 10px;
+        }
+
+        .footer-col p {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 13px;
+        }
+
+        /* Responsive Navbar */
         @media (max-width: 768px) {
-            .nav-menu { display: none; } /* Có thể làm thêm menu rút gọn bằng JS nếu cần */
-            .about-grid, .contact-container { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 32px; }
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            nav ul li {
+                margin-left: 0;
+            }
+            .hero h2 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header>
-        <div class="nav-container">
-            <a href="#" class="logo">Hagisu</a>
-            <ul class="nav-menu">
-                <li><a href="#">Trang Chủ</a></li>
-                <li><a href="#about">Giới Thiệu</a></li>
-                <li><a href="#services">Dịch Vụ</a></li>
-                <li><a href="#contact">Liên Hệ</a></li>
-            </ul>
+        <div class="logo-area">
+            <h1>HAGISU VIET NAM</h1>
+            <span>HỆ THỐNG CẤP GIÓ TƯƠI HỒI NHIỆT VÀ LỌC KHÔNG KHÍ</span>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#tong-quan">Tổng Quan</a></li>
+                <li><a href="#giai-phap">Giải Pháp</a></li>
+                <li><a href="#cau-tao">Cấu Tạo & Lọc</a></li>
+                <li><a href="#dong-may">Dòng Máy</a></li>
+                <li><a href="#tap-doan">Tập Đoàn Menred</a></li>
+                <li><a href="#lien-he">Liên Hệ</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Website đang được nâng cấp</h1>
-            <p>Chúng tôi đang hoàn thiện một trải nghiệm tốt hơn.
-Trong thời gian nâng cấp website, Quý khách vui lòng liên hệ trực tiếp với chúng tôi qua Hotline: 0948 350 089 để được hỗ trợ nhanh nhất .</p>
-            <a href="#contact" class="btn">Hợp Tác Ngay</a>
-        </div>
+    <section class="hero" id="tong-quan">
+        <h2>Website đang được nâng cấp</h2>
+        <p>"Chúng tôi đang hoàn thiện một trải nghiệm tốt hơn. Trong thời gian nâng cấp website, Quý khách vui lòng liên hệ trực tiếp với chúng tôi qua Hotline: 0948 350 089, email: info@hagisu.com để được hỗ trợ nhanh nhất"</p>
+        <a href="#lien-he" class="cta-btn">Nhận Tư Vấn Ngay</a>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="section-title">Về Chúng Tôi</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <h3>Thương hiệu uy tín - Chất lượng hàng đầu</h3>
-                <br>
-                <p>Tại Hagisu Việt Nam, chúng tôi mang trong mình sứ mệnh kiến tạo môi trường sống chuẩn mực thông qua các giải pháp toàn diện về không khí, nước và khí hậu trong nhà. Bằng công nghệ tiên tiến, tiêu chuẩn kỹ thuật cao và tư duy phục vụ bền vững, Hagisu không chỉ cung cấp sản phẩm, mà còn tạo nên những không gian sống trong lành, cân bằng và tốt cho sức khỏe — nơi con người có thể tận hưởng chất lượng sống đúng nghĩa mỗi ngày.</p>
-           
+    <section class="container">
+        <h3 class="section-title">Tại sao các công trình lại cần phải được thông gió?</h3>
+        <div class="why-grid">
+            <div class="why-card">
+                <h3>1. Thiếu hụt Oxy& Tăng CO2</h3>
+                <p>Các không gian kín như phòng ngủ, phòng có lắp đặt điều hòa sẽ bị thiếu Oxy và nồng độ CO2 tăng cao do quá trình hô hấp của con người. Nghiên cứu cho thấy nồng độ CO2 vượt ngưỡng **1000ppm** sẽ gây cảm giác mệt mỏi, buồn ngủ và thiếu tập trung.</p>
             </div>
-            <div>
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Hagisu Team" class="about-img">
+            <div class="why-card">
+                <h3>2. Tích tụ tác nhân gây hại</h3>
+                <p>Không gian kín thường bị tích tụ bụi mịn, ẩm thừa, nhiệt thừa gây ra nấm mốc do không khí không được lưu thông.</p>
+            </div>
+            <div class="why-card">
+                <h3>3. Hợp chất hữu cơ độc hại (VOCs)</h3>
+                <p>Các hợp chất hữu cơ gây hại phát sinh trong quá trình sinh hoạt hoặc từ đồ nội thất mới trong nhà. Việc các chất này tồn tại lâu dần sẽ ảnh hưởng nghiêm trọng đến sức khỏe và gây mùi khó chịu.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" style="background-color: var(--bg-light); max-width: 100%;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 class="section-title">Dịch Vụ Của Hagisu</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                    <h3>Hệ thống cấp gió tươi hồi nhiệt và lọc không khí</h3>
-                    <p>Đa dạng thiết bị, hệ phụ kiện được sản xuất đồng bộ.</p>
+    <section class="features-bg">
+        <div class="container" id="giai-phap">
+            <h3 class="section-title">Một Số Hệ Thống Thông Gió Cơ Bản</h3>
+            <div class="systems-grid">
+                <div class="system-box">
+                    <h4>Thông Gió 1 Chiều Áp Suất Âm</h4>
+                    <p>Hút không khí từ trong nhà thải ra ngoài thông qua quạt hút và cửa gió thải.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3>Hệ thống lọc nước trung tâm cao cấp</h3>
-                    <p>Lọc đầu nguồn, lọc tổng, làm mềm nước, lọc RO cao cấp.</p>
+                <div class="system-box">
+                    <h4>Thông Gió 1 Chiều Áp Suất Dương</h4>
+                    <p>Cấp gió 1 chiều vào nhà thông qua quạt cấp và cửa lấy gió tươi.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div>
-                    <h3>Hệ thống điều hòa không khí thế hệ mới</h3>
-                    <p> Điều hòa nước trung tâm mini chiller,hệ thống thông gió thu hồi nhiệt lọc không khí, hệ thống sưởi sàn nước sử dụng nước tải nhiệt của điều hòa, hệ thống xử lý độ ẩm, kết nối IoT chạy tự động hoàn toàn.</p>
+                <div class="system-box">
+                    <h4>Thông Gió 2 Chiều Cấp - Hút</h4>
+                    <p>Hệ thống cân bằng áp suất sử dụng đồng thời cả quạt cấp và quạt hút.</p>
+                </div>
+                <div class="system-box" style="border-color: var(--primary-color); background: #f0fdf4;">
+                    <h4>Thông Gió Thu Hồi Nhiệt</h4>
+                    <p>Giải pháp tối ưu: Cấp gió tươi đồng thời hồi nhiệt, giữ lại năng lượng làm mát/sưởi ấm hiệu quả.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title">Kết Nối Với Chúng Tôi</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Thông Tin Liên Hệ</h3>
-                <br>
-                <p><i class="fa-solid fa-envelope"></i> info@hagisu.com</p>
-                <p><i class="fa-solid fa-phone"></i> 0948350089</p>
-                <p><i class="fa-solid fa-location-dot"></i> TP. Hồ Chí Minh, Việt Nam</p>
-                <p>Hãy để lại lời nhắn, đội ngũ Hagisu sẽ phản hồi bạn trong vòng 24 giờ làm việc.</p>
-            </div>
-            <div class="contact-form">
-                <form id="contactForm">
-                    <input type="text" placeholder="Họ và tên của bạn" required>
-                    <input type="email" placeholder="Địa chỉ Email" required>
-                    <textarea rows="5" placeholder="Lời nhắn của bạn tới Hagisu..." required></textarea>
-                    <button type="submit" class="btn" style="border: none; cursor: pointer; width: 100%;">Gửi Tin Nhắn</button>
-                </form>
+            <div class="tech-details">
+                <h3>Ứng dụng của hệ thống cấp gió tươi hồi nhiệt – lọc không khí</h3>
+                <ul class="tech-list">
+                    <li>Thay thế hoàn toàn cho hệ thống thông gió tự nhiên cho các công trình, đặc biệt là không gian kín.</li>
+                    <li>Cung cấp tối ưu lượng $O_2$ và không khí sạch cho phòng điều hòa.</li>
+                    <li>Xử lý mùi hôi thường xuyên và liên tục.</li>
+                    <li>Giải quyết triệt để tình trạng bí bách cho các công trình không thể thiết kế thông gió tự nhiên.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Hagisu. Toàn bộ bản quyền được bảo lưu.</p>
+    <section class="container" id="cau-tao">
+        <h3 class="section-title">Cấu Tạo Máy Cấp Gió Tươi Hồi Nhiệt ERV</h3>
+        <p>Hệ thống hoạt động theo nguyên lý lấy không khí từ ngoài trời, lọc sạch bụi bẩn, chất ô nhiễm để cấp vào từng phòng; đồng thời hút khí cũ tồn đọng thải ra ngoài một cách liên tục.</p>
+        
+        <div class="why-grid">
+            <div class="why-card" style="border-left-color: var(--secondary-color);">
+                <h3>Bộ Trao Đổi Nhiệt Ẩm ERV là gì?</h3>
+                <p>Là bộ phận có chức năng trao đổi nhiệt độ giữa 2 luồng không khí, hạn chế tối đa ảnh hưởng cực đoan bởi thời tiết ngoài trời tới không khí trong phòng (tránh đem hơi nóng mùa hè hoặc khí lạnh mùa đông vào nhà), giúp **tiết kiệm điện năng tối đa** cho điều hòa và bù độ ẩm tự nhiên.</p>
+                <ul class="tech-list">
+                    <li><strong>Công dụng:</strong> Thu hồi cả nhiệt cảm nhận và nhiệt ẩn (latent heat) từ hơi ẩm.</li>
+                    <li><strong>Nguyên lý:</strong> Truyền hơi ẩm từ dòng khí ẩm sang dòng khí khô, tránh ngưng tụ nước và bảo vệ hệ thống khỏi nấm mốc.</li>
+                    <li><strong>Vật liệu cao cấp:</strong> Công nghệ màng polymer kháng khuẩn DAIS (USA) gồm 298 lớp màng, tổng diện tích 18m2, chiều dài dòng chảy ngược - chéo đạt 60m.</li>
+                </ul>
+            </div>
+
+            <div class="why-card" style="border-left-color: var(--accent-color);">
+                <h3>Hệ Thống Các Cấp Lọc Không Khí</h3>
+                <p>Hagisu cung cấp đầy đủ các cấp lọc tùy thuộc vào từng model máy và điều kiện môi trường công trình:</p>
+                <ul class="tech-list">
+                    <li><strong>Bộ lọc thô (Mesh / Gauze net):</strong> Lọc hiệu quả bụi thô, bụi mịn PM10 và côn trùng.</li>
+                    <li><strong>Bộ lọc sơ cấp G4 / F7:</strong> Lọc các hạt bụi kích thước PM10
+                    <li><strong>Bộ lọc Than Hoạt Tính:</strong> Khử mùi, lọc khí độc và các hợp chất hữu cơ bay hơi (VOC).</li>
+                    <li><strong>Bộ lọc hiệu quả cao HEPA H13:</strong> Lọc sạch bụi mịn PM2.5 đến 99.97%.</li>
+                    <li><strong>Bộ lọc tĩnh điện vi tinh diện ifD (Tùy chọn):</strong> Có thể giặt/hút bụi tái sử dụng vĩnh viễn, tiêu diệt vi khuẩn/virus và giữ được các hạt siêu mịn bằng cơ chế phóng điện Corona và module tổ ong điện môi mật độ cao.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <h4 style="margin-top:20px; color: var(--primary-color);">Ví dụ Hiệu Suất Trao Đổi Nhiệt (Tùy theo Model)</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Luồng khí</th>
+                        <th>Ký hiệu</th>
+                        <th>Nhiệt độ đầu vào/ra mẫu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Khí tươi ngoài trời (Outdoor Air)</td>
+                        <td><strong>OA</strong></td>
+                        <td>-5.03 độ C</td>
+                    </tr>
+                    <tr>
+                        <td>Khí thải trong nhà (Return Air)</td>
+                        <td><strong>RA</strong></td>
+                        <td>21.09 đô C</td>
+                    </tr>
+                    <tr>
+                        <td>Khí sạch cấp vào nhà (Supply Air)</td>
+                        <td><strong>SA</strong></td>
+                        <td>18.83 độ C(Đã được sưởi ấm nhờ thu hồi nhiệt từ dòng thải)</td>
+                    </tr>
+                    <tr>
+                        <td>Khí thải ra ngoài trời (Exhaust Air)</td>
+                        <td><strong>EA</strong></td>
+                        <td>7.29 độ C</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="features-bg" id="dong-may">
+        <div class="container">
+            <h3 class="section-title">Danh Mục Thiết Bị & Hệ Phụ Kiện Đồng Bộ</h3>
+            <p style="text-align:center; margin-bottom: 30px;">Hagisu cung cấp giải pháp thiết kế đồng bộ cho đa dạng loại hình công trình: **Chung cư, Nhà phố, Biệt thự**.</p>
+            
+            <h4>Dòng máy cấp gió tươi hồi nhiệt âm trần</h4>
+            <div class="tags-container">
+                <span class="tag blue">Model S5</span>
+                <span class="tag blue">Model P5</span>
+                <span class="tag blue">Model R350</span>
+                <span class="tag blue">Dòng bù áp suất D500</span>
+                <span class="tag blue">Máy cấp gió tươi - Hút ẩm DEH40 - DEH60</span>
+                <span class="tag blue">Dòng máy tích hợp hút ẩm Q6</span>
+            </div>
+
+            <h4 style="margin-top: 30px;">Dòng máy Thương Mại (Công Suất Lớn)</h4>
+            <div class="tags-container">
+                <span class="tag green">NET 800</span>
+                <span class="tag green">NET 1000</span>
+                <span class="tag green">NET 1500</span>
+                <span class="tag green">NET 2000</span>
+                <span class="tag green">NET 2500</span>
+                <span class="tag green">NET 3000</span>
+                <span class="tag green">NET 5000 - 10.000</span>
+                <span class="tag green">Hệ bánh xe hồi nhiệt (Heat Recovery Wheel) + AHU</span>
+            </div>
+
+            <h4 style="margin-top: 30px;">Dòng máy Đặt Sàn & Treo Tường (Model G)</h4>
+            <div class="tags-container">
+                <span class="tag">MENRED G2</span>
+                <span class="tag">Model G3 / G4 / G5 / G6 / G7 / G9</span>
+                <span class="tag">Máy cấp gió tươi treo tường khử ẩm</span>
+                <span class="tag">Máy cấp gió tươi dạng tủ đứng</span>
+                <span class="tag">Hệ thống phân phối khí dưới sàn cao cấp</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-menred" id="tap-doan">
+        <div class="container" style="padding:0 20px;">
+            <h3 class="section-title">Đối Tác Chiến Lược - Tập Đoàn MENRED</h3>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: #cbd5e1;">
+                Hagisu tự hào đồng hành cùng Tập đoàn MENRED (Thành lập năm 1995) - Cụm công nghiệp sản xuất hàng đầu toàn cầu trong lĩnh vực HVAC, nhà thông minh và năng lượng xanh.
+            </p>
+            <div class="why-grid">
+                <div class="why-card" style="background: rgba(255,255,255,0.1); border: none; color: white;">
+                    <h3>Hệ Thống Khí Hậu Cao Cấp 5+mg</h3>
+                    <p>Giải pháp **Hệ thống 5 trong 1** (Thông gió - Panel điều hòa không khí áp trần tường - Hệ thống điều hòa khí hậu 5+mg) kết hợp Mini Chiller, Trạm phân phối nước All-In-One và Tank nước đệm.</p>
+                    <p style="margin-top:10px; font-weight: bold; color: var(--secondary-color);">"Đây không phải là điều hòa truyền thống. Việc điều chỉnh nhiệt độ được thực hiện trực tiếp trên bề mặt công trình, thay vì thông qua sự đối lưu của không khí."</p>
+                </div>
+                <div class="why-card" style="background: rgba(255,255,255,0.1); border: none; color: white;">
+                    <h3>Năng Lực Cốt Lõi Menred</h3>
+                    <ul class="tech-list" style="color: #cbd5e1;">
+                        <li>Đối tác của Phòng thí nghiệm Trọng điểm Quốc gia về "Tòa nhà Tương lai".</li>
+                        <li>Đối tác chiến lược của Tập đoàn Electrolux (Thụy Điển - Fortune 500) tại thị trường Trung Quốc.</li>
+                        <li>Hệ sinh thái thương hiệu toàn cầu: <span style="color:white; font-weight:bold;">Menred, MElle, MP, MS, MC, Electrolux ME, MAmAir, Weiss Wasser (白水MW), MH, MI, Halmburger, Mibire</span>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="lien-he">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>HAGISU VIỆT NAM</h4>
+                <p>Chuyên cung cấp giải pháp tổng thể về Hệ thống cấp gió tươi hồi nhiệt và lọc không khí bảo vệ sức khỏe cho mọi công trình xanh.</p>
+                <p><strong>Website:</strong> www.hagisu.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hệ Thống Văn Phòng & Hotline</h4>
+                <p><strong>TP. Hồ Chí Minh:</strong><br>Số 120-120A-122 Đường số 20, phường An Nhơn, Tp. Hồ Chí Minh.<br>📞 Hotline: 0948.350.089</p>
+                <p><strong>Hà Nội:</strong><br>Số 94, Trần Khát Chân, phường Bạch Đằng, quận Hai Bà Trưng.<br>📞 Hotline: 0988.694.056</p>
+                <p><strong>Đà Nẵng:</strong><br>Số 70, Bàu Năng 1, phường Hoà Khánh, Đà Nẵng.<br>📞 Hotline: 0935.414.112</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 HAGISU VIET NAM. All Rights Reserved. "Deep Sleep, Wake Up Naturally"</p>
+        </div>
     </footer>
 
-    <script>
-        // Xử lý sự kiện khi gửi form liên hệ
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Cảm ơn bạn đã liên hệ với Hagisu! Chúng tôi sẽ phản hồi sớm nhất.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
